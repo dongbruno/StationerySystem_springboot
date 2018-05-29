@@ -1,4 +1,4 @@
-package citi.entity;
+package citi.dao.impl;
 // Generated 2018-5-28 2:23:43 by Hibernate Tools 5.0.6.Final
 
 import javax.ejb.Stateless;
@@ -7,21 +7,23 @@ import javax.persistence.PersistenceContext;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import citi.entity.Systeminfo;
+
 /**
- * Home object for domain model class Stationery.
- * @see citi.entity.Stationery
+ * Home object for domain model class Systeminfo.
+ * @see citi.entity.Systeminfo
  * @author Hibernate Tools
  */
 @Stateless
-public class StationeryHome {
+public class SysteminfoHome {
 
-	private static final Log log = LogFactory.getLog(StationeryHome.class);
+	private static final Log log = LogFactory.getLog(SysteminfoHomeTest.class);
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public void persist(Stationery transientInstance) {
-		log.debug("persisting Stationery instance");
+	public void persist(Systeminfo transientInstance) {
+		log.debug("persisting Systeminfo instance");
 		try {
 			entityManager.persist(transientInstance);
 			log.debug("persist successful");
@@ -31,8 +33,8 @@ public class StationeryHome {
 		}
 	}
 
-	public void remove(Stationery persistentInstance) {
-		log.debug("removing Stationery instance");
+	public void remove(Systeminfo persistentInstance) {
+		log.debug("removing Systeminfo instance");
 		try {
 			entityManager.remove(persistentInstance);
 			log.debug("remove successful");
@@ -42,10 +44,10 @@ public class StationeryHome {
 		}
 	}
 
-	public Stationery merge(Stationery detachedInstance) {
-		log.debug("merging Stationery instance");
+	public Systeminfo merge(Systeminfo detachedInstance) {
+		log.debug("merging Systeminfo instance");
 		try {
-			Stationery result = entityManager.merge(detachedInstance);
+			Systeminfo result = entityManager.merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -54,10 +56,10 @@ public class StationeryHome {
 		}
 	}
 
-	public Stationery findById(int id) {
-		log.debug("getting Stationery instance with id: " + id);
+	public Systeminfo findById(int id) {
+		log.debug("getting Systeminfo instance with id: " + id);
 		try {
-			Stationery instance = entityManager.find(Stationery.class, id);
+			Systeminfo instance = entityManager.find(Systeminfo.class, id);
 			log.debug("get successful");
 			return instance;
 		} catch (RuntimeException re) {

@@ -98,4 +98,12 @@ public class Systeminfo implements java.io.Serializable {
 		this.operator = operator;
 	}
 
+	@Override
+	public String toString() {
+		return "Systeminfo [systemid=" + systemid + ", note=" + note + ", startdate=" + startdate + ", deadline="
+				+ deadline + ", update=" + update + ", operator=" + operator + "]";
+	}
+	
+	
+
 }

@@ -1,4 +1,4 @@
-package citi.entity;
+package citi.dao.impl;
 // Generated 2018-5-28 2:23:43 by Hibernate Tools 5.0.6.Final
 
 import javax.ejb.Stateless;
@@ -6,6 +6,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import citi.entity.Staff;
 
 /**
  * Home object for domain model class Staff.
